@@ -2,6 +2,7 @@ import { dataBase } from "../dataBase/dataBase.js";
 
 const ctrl = {};
 
+// Metodo para crear usuario
 ctrl.crearUsuario = (req, res) => {
     const { nombre, edad, email } = req.body;
     const id = dataBase.length + 1;
@@ -9,10 +10,12 @@ ctrl.crearUsuario = (req, res) => {
     res.json({ message: 'Usuario creado correctamente!' });
 }
 
+// Metodo para obtener todos los usuarios
 ctrl.obtenerTodos = (req, res) => {
     res.json( dataBase );
 }
 
+// Metodo para obtener un usuario por su id
 ctrl.obtenerUsuario = (req, res) => {
     const { id } = parseInt(req.params.id);
     const user = dataBase.find( user => user.id == id);
@@ -22,6 +25,7 @@ ctrl.obtenerUsuario = (req, res) => {
     res.json(user);
 }
 
+// Metodo para modificar un usuario
 ctrl.modificarUsuario = (req, res) => {
     const { id } = parseInt(req.params.id);
     const { nombre, edad, email } = req.body;
@@ -35,6 +39,7 @@ ctrl.modificarUsuario = (req, res) => {
     res.json({ message: 'Usuario modificado correctamente' });
 }
 
+// Metodo para eliminar un usuario
 ctrl.eliminarUsuario = (req, res) => {
     const { id } = parseInt(req.params.id);
     const user = dataBase.find( user => user.id == id);

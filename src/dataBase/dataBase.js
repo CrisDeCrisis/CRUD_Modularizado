@@ -7,15 +7,15 @@ const dataBase = [
     },
     {
         id: 2,
-        nombre: 'Pablo',
+        nombre: 'Ruth',
         edad: 29,
-        email: 'pablo@gmail.com'
+        email: 'ruth@gmail.com'
     },
     {
         id: 3,
-        nombre: 'Pedro',
+        nombre: 'Pablo',
         edad: 18,
-        email: 'pedro@gmail.com'
+        email: 'pablo@gmail.com'
     }
     
 ]

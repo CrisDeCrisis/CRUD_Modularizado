@@ -15,7 +15,7 @@ app.use(cors());
 // Rutas
 app.use('/api/user', router);
 
-// Escuchar puerto
+// Escuchar el servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto: ${PORT}`);
 });
